@@ -1,0 +1,6 @@
+df=pd.read_csv("dravid.csv")
+
+print(df.shape)
+missing_counts = df.isnull().sum()
+
+print(missing_counts)
