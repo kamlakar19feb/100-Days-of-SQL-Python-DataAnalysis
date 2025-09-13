@@ -1,0 +1,18 @@
+Mini Projects
+
+1️⃣ Python Project
+
+Task: Write a program that asks the user for a sentence and prints the frequency of each word.
+(Hint: dictionary or collections.Counter can be useful)
+
+2️⃣ SQL Project
+
+Task: Write a query to get the top 5 customers by total purchase amount from an Orders table.
+
+3️⃣ Data Analysis Project
+
+Task: Load a dataset in pandas and:
+
+Fill missing values in a numeric column with the column mean.
+
+Fill missing values in a categorical column with the mode.
