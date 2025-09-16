@@ -1,0 +1,13 @@
+#1.Load a dataset and group by a categorical column (e.g., Department) and find the average of each numeric column.
+df=pd.read_csv("employees.csv")
+print(df.dtypes)
+for col in df.select_dtypes(include="object").columns:
+  df[col]=df[col].astype("category")
+print(df.dtypes)
+grouped = df.groupby("department_id").mean(numeric_only=True)
+print(grouped)
+
+#2.	For each department, find the employee with the maximum salary (similar to SQL window function logic).
+max_salary_idx=df.groupby("department_id")["salary"].idxmax()
+result=df.loc[max_salary_idx]
+print(result)
