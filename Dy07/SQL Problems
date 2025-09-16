@@ -1,0 +1,23 @@
+--1.	Find employees whose salary is above the average salary of their department.
+(Use subquery or JOIN with department averages.)
+WITH cte AS (
+    SELECT Department_name, AVG(salary) AS Avg_dept_salary
+    FROM Employees
+    GROUP BY Department_name
+)
+SELECT e.employee_id, e.employee_name, e.Department_name, e.salary
+FROM Employees e
+JOIN cte c
+  ON e.Department_name = c.Department_name
+WHERE e.salary > c.Avg_dept_salary
+ORDER BY e.salary DESC;
+--2.	List the top 3 highest-paid employees in each department.
+(Hint: Use ROW_NUMBER() or RANK() window functions if supported.)
+WITH ranked AS (
+    SELECT employee_id, Department_name, salary,
+           ROW_NUMBER() OVER (PARTITION BY Department_name ORDER BY salary DESC) AS rn
+    FROM Employees
+)
+SELECT *
+FROM ranked
+WHERE rn <= 3
