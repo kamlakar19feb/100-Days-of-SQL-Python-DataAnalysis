@@ -1,0 +1,26 @@
+#1.	Check if two strings are anagrams.
+Example: "listen" and "silent" → ✅ Anagrams.
+import re
+a=input("Enter string a: ")
+b=input("Enter string b: ")
+cleaned_a=re.sub(r'[^a-zA-Z0-9]','',a).lower()
+cleaned_b=re.sub(r'[^a-zA-Z0-9]','',b).lower()
+if sorted(cleaned_a)==sorted(cleaned_b):
+  print("a and b are anagram")
+
+#2.	Find all prime numbers up to n using a loop.
+Input: n = 20 → Output: [2, 3, 5, 7, 11, 13, 17, 19].
+import math
+n=int(input("Enter number to find list of prime numbers upto it: "))
+list_prime=[]
+if n<=1:
+  print("Invalid number")
+for i in range(2,n+1):
+  is_prime=True
+  for j in range(2,int(math.sqrt(i))+1):
+    if i%j==0:
+      is_prime=False
+      break
+  if is_prime:
+    list_prime.append(i)
+print("Prime numbers up to", n, ":", list_prime
