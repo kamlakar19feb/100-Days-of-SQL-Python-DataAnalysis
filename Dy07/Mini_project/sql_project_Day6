@@ -1,0 +1,7 @@
+#Task: From a Sales table, find the product with the highest sales in each month.
+(Hint: use ROW_NUMBER() or MAX() + GROUP BY.)
+SELECT product_id, Month, Year, total_amount
+FROM(SELECT product_id, Extract (Month FROM order_date) AS Month, Extract(YEAR FROM order _date) AS Year, sum(amount) AS total_amount, ROW_NUMBER() over(partition by Extract (Month FROM order_date) order by sum(amount) DESC) AS rn
+FROM Sales
+GROUP BY product_id, Extract (Month FROM order_date), Extract(YEAR FROM order _date)) t
+WHERE rn=1
