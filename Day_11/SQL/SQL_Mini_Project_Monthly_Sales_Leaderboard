@@ -1,0 +1,18 @@
+From Sales table, find the top 3 selling products per month by revenue
+WITH sale_rank AS (
+SELECT
+product_id,
+sum(quantity*price) AS revenue,
+MONTH(order_date) A month_,
+DENSE_RANK() OVER(PARTITION BY MONTH(order_date) ORDER BY sum(quantity*price) DESC) AS rnk_
+FROM
+sales
+GROUP BY
+product_id
+)
+SELECT
+*
+FROM
+sale_rank
+WHERE
+rnk_<=3
