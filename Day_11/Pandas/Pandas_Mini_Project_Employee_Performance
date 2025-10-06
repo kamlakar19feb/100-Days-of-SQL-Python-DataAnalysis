@@ -1,0 +1,16 @@
+Input: employee_sales.csv with employee_id, Month, Revenue
+
+Task:
+
+Calculate total revenue per employee
+
+result1=emp_df.groupby('employee_id')['Revenue'].sum()
+result1
+
+Find employee with highest revenue per month
+result2=emp_df.loc[emp_df.groupby('Month')['Revenue'].idxmax()].reset_index()
+result2
+
+Optional: Plot bar chart of top 5 employees by total revenue
+
+emp_df.groupby('employee_id')['Revenue'].sum().nlargest(5).plot(kind='bar')
