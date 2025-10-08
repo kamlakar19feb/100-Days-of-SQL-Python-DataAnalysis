@@ -1,0 +1,3 @@
+sales.csv (Product, Region, Revenue, Cost)
+employees.csv (emp_id, emp_name, Department, Salary)
+sales_data.csv (Product, Region, Quantity, Unit_Price, Date)
