@@ -1,0 +1,3 @@
+Employees(emp_id, emp_name, department, salary, joining_date)
+Orders(order_id, customer_id, order_date, amount)
+Customer_Orders(customer_id, order_date)
