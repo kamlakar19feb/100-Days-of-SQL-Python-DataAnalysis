@@ -1,0 +1,10 @@
+Problem: The HR director wants a report showing how long employees have been with the company to plan loyalty bonuses.
+Task: Calculate the total years of service for every employee (using their HireDate). Display their name and their rounded years of service.
+
+SELECT
+	Name,
+	ROUND(DATEDIFF(YEAR, HireDate, CDate),0) AS Num_of_Years_in_service
+FROM
+	Employees
+ORDER BY
+	Num_of_Years_in_service DESC
