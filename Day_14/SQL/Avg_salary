@@ -1,0 +1,16 @@
+Problem: HR wants to quickly flag employees who earn more than their departmental average salary to ensure fair compensation reviews.
+Task: Write a query to list the names of employees and their salaries where the individual salary is greater than the average salary of their specific department.
+
+
+SELECT * FROM (
+    SELECT
+        e.Name,
+        e.Salary,
+        d.DeptName,
+        AVG(e.Salary) OVER (PARTITION BY e.DeptID) AS Avg_Department_Salary -- Attaches avg to every row
+    FROM
+        Employees e
+    INNER JOIN
+        Departments d ON e.DeptID = d.DeptID
+) AS SubqueryAlias
+WHERE Salary > Avg_Department_Salary;
