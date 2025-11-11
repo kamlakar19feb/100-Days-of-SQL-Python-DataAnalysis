@@ -1,0 +1,2 @@
+merged_df=pd.merge(df1,df2, ON = 'CustomerID, how='inner')
+print(merged_df)
