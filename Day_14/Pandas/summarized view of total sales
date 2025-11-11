@@ -1,0 +1,7 @@
+pivot = pd.pivot_table(df, 
+                       index='Region',        # rows
+                       columns='Product',  # columns to aggregate
+                       values= 'Total_Sales',
+                       aggfunc='sum',
+                       fill_value=0) 
+print(pivot)
