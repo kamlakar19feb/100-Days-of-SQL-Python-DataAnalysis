@@ -1,0 +1,16 @@
+Scenario: You are analyzing website user behavior and A/B test results.
+1. Business Problem: A/B Testing Foundation
+Problem: Explain the fundamental concept we rely on in statistics to be confident that our small test samples (like an A/B test group of 100 users) can accurately represent the behavior of the entire website population (millions of users).
+Task: Explain the Central Limit Theorem in simple terms and why it is critical for reliable business analysis.
+
+The Central limit theorem says that if you take many random samples from any population (no matter how the original data looks - skewed, uniform or irregular), the average mean of these samples will form a normal (bell shaped) distribution as the sample size gets larger
+
+Why It’s Critical for Business Analysis:
+
+Predictability: It allows analysts to make accurate predictions about populations using sample data.
+
+Confidence Intervals: It’s the foundation for calculating margins of error and confidence levels.
+
+Decision-Making: Businesses can test hypotheses (like “Did sales increase after a campaign?”) even without studying every customer.
+
+Reliability: It ensures statistical results are stable and trustworthy when based on large enough samples.
