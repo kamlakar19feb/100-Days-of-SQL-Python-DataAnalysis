@@ -1,0 +1,19 @@
+Business Problem: Confidence in Customer Ratings
+Problem: A recent survey of 100 customers gave a mean satisfaction rating of 4.1 out of 5 stars, with a standard deviation of 0.5. We need to tell the CEO, with 95% certainty, the range where the true average satisfaction score of all customers likely lies.
+Task: Calculate the 95% confidence interval for the true population mean rating
+
+x=4.1
+n=100
+sd=0.5
+prob=95
+z=norm.ppf(1-((100-prob)/(2*100)))
+z=1.96
+
+C_I1=x+z*(sd/(n**0.5))
+print(C_I1)
+
+C_I2=x-z*(sd/(n**0.5))
+print(C_I2)
+
+Final 95% Confidence Interval:
+(4.002, 4.198)
