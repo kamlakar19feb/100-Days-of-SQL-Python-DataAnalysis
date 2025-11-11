@@ -1,0 +1,15 @@
+Business Problem: Fixing Date Formats
+Problem: Order dates were imported incorrectly as strings in the confusing "YYYY/DD/MM" format. We need them as proper date objects formatted as "MM-DD-YYYY" for easier reporting.
+Task: Convert the date column to the correct datetime object format and display it in the "MM-DD-YYYY" format.
+
+df=pd.read_csv('orders_dates.csv')
+df.head(10)
+
+df['Order_Date'] = df['Order_Date'].str.strip()
+df['Order_Date'] = pd.to_datetime(df['Order_Date'], format='%Y/%d/%m')
+
+df
+
+df.dtypes
+df['Order_Date']=df['Order_Date'].dt.strftime('%m/%d/%Y')
+df
