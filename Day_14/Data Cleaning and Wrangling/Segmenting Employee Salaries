@@ -1,0 +1,9 @@
+Business Problem: Segmenting Employee Salaries
+Problem: HR wants to analyze how different salary brackets correlate with employee retention, but they need the numerical salary data categorized into meaningful groups.
+Task: Create a new column named Salary_Bracket that classifies salaries into three groups: "Low" (< $50k), "Medium" ($50k - $80k), and "High" (> $80k).
+
+df['Salary_Bracket']=np.where(df['Salary']>80000,'High', np.where((df['Salary'] >= 50000) & (df['Salary'] <= 80000),'Medium', 'Low'))
+print(df)
+
+6. Machine Learning (Basics)
+Scenario: We are beginning to explore predictive analytics to help the business make smarter decisions.
