@@ -1,0 +1,6 @@
+Business Problem: Explaining Customer Clustering (Concept)
+Problem: We want to group similar customers together to target them with personalized marketing campaigns, but we don't have predefined labels for these groups.
+Task: Briefly explain how the K-Nearest Neighbors (KNN) algorithm could conceptually classify a new customer into an existing customer group.
+
+The K-Nearest Neighbors (KNN) method works on the principle of similarity and majority voting. When a new customer arrives, the algorithm compares them with existing customers and measures how close they are based on features such as spending habits, income, or age. 
+It then identifies the K nearest customers with the most similar characteristics and assigns the new customer to the group or cluster that most of those nearest customers belong to.
