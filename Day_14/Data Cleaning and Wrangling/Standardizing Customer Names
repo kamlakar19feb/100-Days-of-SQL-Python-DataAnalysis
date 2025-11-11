@@ -1,0 +1,9 @@
+Business Problem: Standardizing Customer Names
+Problem: Customer names were entered manually and have inconsistent spacing and capitalization (" john smith ", "MARY SUE"). This makes communication look unprofessional.
+Task: Clean the column of names: remove all extra leading/trailing whitespace and standardize all entries to "Title Case" (e.g., "John Smith").
+
+df['first_name']=df['first_name'].str.strip().str.title()
+df['last_name']=df['last_name'].str.strip().str.title()
+
+df['first_name']=df['first_name'].str.replace(r'\s+', ' ', regex=True)
+df['last_name']=df['last_name'].str.replace(r'\s+', ' ', regex=True)
