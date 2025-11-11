@@ -1,0 +1,5 @@
+Business Problem: Setting Up a Hypothesis TestProblem: The product team changed the website checkout button color, hoping to increase the average order value (AOV) above the current $50 baseline. They ran a test and the new average was $55.
+Task: Formulate the Null Hypothesis (\(H_{0}\)) and the Alternative Hypothesis (\(H_{a}\)) for a statistical test to determine if the new button color truly had an effect.
+
+H0: AOV is less than or equal to $50.
+Ha: AOV is greater than $50.
