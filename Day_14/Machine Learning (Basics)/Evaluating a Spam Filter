@@ -1,0 +1,14 @@
+Machine Learning (Basics)
+Scenario: We are beginning to explore predictive analytics to help the business make smarter decisions.
+
+1. Business Problem: Evaluating a Spam Filter
+Problem: We built a basic ML model to flag emails as 'spam' or 'not spam'. The marketing team wants to know if the model is better at catching all spam or better at avoiding marking good emails as spam.
+Task: Explain the meaning of the metrics 'Precision' and 'Recall' in this context, and advise which one might be more important for a spam filter.
+
+Recall - Measures the models ability to catch all the spam emails.  Focus - Out of all the emails that are spam, how many did the filter correctly able to identify as spam?
+High recall means fewer spam emails reach your inbox (Fewer False Negative)
+Precision - Measures how accurate the model is when it actually filters a message as spam. Focus - Out of all emails that were flagged as spam, how many were actually spam.
+High Precision means fewer legitimate mails flagged as spam (Fewer False Positive)
+
+Which is more important?
+Precision is more important - It is a bigger problem for legitimate email to be wrongly marked as spam(False Positive) and potentially missed by the user than for an obvious spam mail to ocassionaly slip into the inbox (False Negative)
