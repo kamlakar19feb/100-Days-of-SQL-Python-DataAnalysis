@@ -1,0 +1,20 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+data = {
+    'StudentID': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    'Science_Score': [86, 85, 90, 88, 92, 76, 81, 95, 89, 84],
+    'Attendance': [82, 87, 91, 93, 96, 89, 85, 97, 94, 88]
+}
+
+df = pd.DataFrame(data)
+bins=[80,90,100]
+labels=['80-90%', '90-100%']
+df['Attendance_Category']=pd.cut(df['Attendance'], bins=bins, labels=labels, right=True)
+plt.figure(figsize=(6,4))
+sns.boxplot(x='Attendance_Category', y= 'Science_Score', data=df, palette='Set2')
+plt.title('Science Score Distribution by Attendance Category')
+plt.xlabel('Attendance Category')
+plt.ylabel('Science Score')
+plt.show()
