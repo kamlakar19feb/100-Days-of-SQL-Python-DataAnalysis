@@ -1,0 +1,10 @@
+data = {
+    'Employee': ['Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Hannah', 'Ian', 'Jane'],
+    'Salary': [50000, 52000, 48000, 75000, 80000, 55000, 49000, 120000, 95000, 51000]
+}
+
+df = pd.DataFrame(data)
+
+df['Salary'].plot(kind='hist', bins=5, edgecolor='black', title='Salary Distribution')
+plt.xlabel('Salary')
+plt.show()
