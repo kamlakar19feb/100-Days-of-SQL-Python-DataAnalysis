@@ -1,0 +1,4 @@
+Problem: We are building a machine learning model using two very different data points: a customer's Age (e.g., values 20-70) and their Annual_Income (e.g., values $30,000 - $200,000).
+Task: Explain why many machine learning algorithms require us to scale or normalize these features before training the model.
+
+Normalization ensures all the features even with vastly different scale contribute equally to the model's performance, preventing features with large values from dominating the learning process simply due to their magnitude
