@@ -1,0 +1,13 @@
+Problem: Management needs a clear, ranked list of salaries within each department to visualize compensation hierarchy.
+Task: Generate a report that ranks employees within each department based on their salary, from highest to lowest paid (rank 1 is highest paid in each department)
+
+SELECT
+	e.Name as Emp_Name
+	d.DeptName as Department_Name
+	e.Salary as Salary
+	Dense_Rank() over (Partition by d.DeptName Order By Salary DESC ) as Rank_in_Dept
+FROM
+	Employees e
+	Inner Join
+	Departments d
+	ON e.DeptID = d.DeptID
